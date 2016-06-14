@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:id="@+id/item_view"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:text="2"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:id="@+id/item_car_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="mers"
+        android:layout_toRightOf="@+id/item_car_position"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:id="@+id/item_car_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/item_delete"
+        android:src="@android:drawable/ic_delete"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/item_edit"
+        android:padding="10dp"
+        android:src="@android:drawable/ic_menu_preferences"
+        android:layout_toLeftOf="@+id/item_delete"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>

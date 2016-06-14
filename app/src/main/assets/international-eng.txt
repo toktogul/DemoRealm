@@ -1,0 +1,159 @@
+[
+
+        {
+            "city_name":"Moscow",
+            "days":[
+                "Friday"
+            ],
+             "times":[
+                "21:00"
+             ]
+        },
+
+
+     {
+            "city_name":"Tomsk",
+             "days":[
+                 "Tuesday", "Friday"
+                 ],
+              "times":[
+                 "10:00"
+              ]
+        },
+
+
+     {
+            "city_name":"Omsk",
+             "days":[
+                 "Tuesday", " Friday "
+                 ],
+              "times":[
+                 "12:30"
+              ]
+        },
+{
+            "city_name":"Krasnoyarsk",
+             "days":[
+                 "Tuesday", " Wednesday ", " Thursday ", " Sunday "
+                 ],
+              "times":[
+                 "11:00", "15:00"
+              ]
+        },
+
+
+        {
+            "city_name":"Yekaterinburg",
+             "days":[
+                 "Saturday "
+                 ],
+              "times":[
+                 "09:00"
+              ]
+
+        },
+{
+            "city_name":"Kemerovo",
+             "days":[
+                 "Saturday"
+                 ],
+              "times":[
+                 "09:00"
+              ]
+
+        },
+{
+            "city_name":"Novosibirsk",
+             "days":[
+                 "Monday", "Thursday "
+                 ],
+              "times":[
+                 "12:00"
+              ]
+
+        },
+{
+            "city_name":"Almaty",
+             "days":[
+                 "Daily"
+                 ],
+              "times":[
+                "09:30", "11:30", "12:50"
+
+              ]
+
+        },
+{
+            "city_name":"Astana",
+             "days":[
+                 " Every other day"
+                 ],
+              "times":[
+                "15:00"
+
+
+              ]
+
+        },
+{
+            "city_name":"Taraz",
+             "days":[
+                 "Daily"
+                 ],
+              "times":[
+                "08:20", "10:45", "15:25", "17:30"
+
+
+              ]
+
+        },
+{
+            "city_name":"Shymkent",
+             "days":[
+                 "Daily"
+                 ],
+              "times":[
+                "21:30"
+
+
+              ]
+
+        },
+{
+            "city_name":"Zhibek-Zholy",
+             "days":[
+                 "Daily"
+                 ],
+              "times":[
+                "19:50", "20:50"
+
+
+              ]
+
+        },
+{
+            "city_name":"Kashgar",
+             "days":[
+                 "Wednesday "
+                 ],
+              "times":[
+                "16:00"
+
+
+              ]
+
+        },
+{
+            "city_name":"Atush",
+             "days":[
+                 " Thursday "
+                 ],
+              "times":[
+                "16:00"
+
+
+              ]
+
+        }
+
+]
