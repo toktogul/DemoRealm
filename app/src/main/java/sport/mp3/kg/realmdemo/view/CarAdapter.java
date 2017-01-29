@@ -18,8 +18,6 @@ import sport.mp3.kg.realmdemo.models.BaseModel;
  */
 public class CarAdapter<M extends BaseModel> extends RecyclerView.Adapter<CarAdapter.CarViewHolder> {
 
-
-    private static final String TAG = CarAdapter.class.getName();
     private List<M> carList = new ArrayList<>();
     private OnCarAdapterListener listener;
 
