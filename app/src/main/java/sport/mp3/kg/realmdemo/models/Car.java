@@ -10,6 +10,7 @@ public class Car extends RealmObject implements BaseModel {
 
     @PrimaryKey()
     private long id;
+
     private String name;
 
 
