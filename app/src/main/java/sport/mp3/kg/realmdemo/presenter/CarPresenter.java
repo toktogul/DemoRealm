@@ -14,7 +14,6 @@ import sport.mp3.kg.realmdemo.view.MainView;
  */
 public class CarPresenter implements Presenter<Car> {
 
-    private static final String TAG = CarPresenter.class.getName();
     private MainView activity;
     private Realm realm;
 
