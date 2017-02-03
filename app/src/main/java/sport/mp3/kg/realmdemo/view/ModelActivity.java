@@ -14,6 +14,7 @@ import sport.mp3.kg.realmdemo.presenter.ModelPresenter;
 public class ModelActivity extends BaseActivity implements MainView<Model> ,
                                                 CarAdapter.OnCarAdapterListener<Model>{
 
+    private static final String TAG = ModelActivity.class.getName();
     private String parentId;
 
     @Override
