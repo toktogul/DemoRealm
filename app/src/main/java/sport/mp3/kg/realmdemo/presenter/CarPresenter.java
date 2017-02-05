@@ -11,9 +11,6 @@ import io.realm.RealmResults;
 import sport.mp3.kg.realmdemo.models.Car;
 import sport.mp3.kg.realmdemo.view.MainView;
 
-/**
- * Created by chen on 13.06.16.
- */
 public class CarPresenter implements Presenter<Car> {
 
 
@@ -36,6 +33,12 @@ public class CarPresenter implements Presenter<Car> {
         if(activity != null){
             Log.d("happy", "start: ");
             Log.d("happy", "start: ");
+            Log.d("happy", "start: ");
+            Log.d("happy", "start: ");
+            Log.d("happy", "start: ");
+
+            Log.d("happy", "start: ");
+
         }
     }
 
@@ -82,7 +85,7 @@ public class CarPresenter implements Presenter<Car> {
     public List<Car> refresh(){
         RealmQuery<Car> query = realmInstance.where(Car.class);
         RealmResults<Car> result = query.findAll();
-
+        Log.d("happy", "start: ");
         List<Car> carList = new ArrayList<>();
         for (int i = 0; i < result.size(); i++) {
             carList.add(result.get(i));
