@@ -11,6 +11,10 @@ import io.realm.RealmResults;
 import sport.mp3.kg.realmdemo.models.Car;
 import sport.mp3.kg.realmdemo.view.MainView;
 
+/*
+
+Test file
+ */
 public class CarPresenter implements Presenter<Car> {
 
 
