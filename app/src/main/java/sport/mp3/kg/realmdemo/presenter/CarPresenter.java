@@ -1,5 +1,7 @@
 package sport.mp3.kg.realmdemo.presenter;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,12 +16,14 @@ import sport.mp3.kg.realmdemo.view.MainView;
  */
 public class CarPresenter implements Presenter<Car> {
 
+
     private MainView activity;
-    private Realm realm;
+    boolean isTurn = false;
+    private Realm realmInstance;
 
     public CarPresenter(MainView activity) {
         this.activity = activity;
-        realm = Realm.getDefaultInstance();
+        realmInstance = Realm.getDefaultInstance();
     }
 
     @Override
@@ -30,14 +34,15 @@ public class CarPresenter implements Presenter<Car> {
     private void start(){
 
         if(activity != null){
-            activity.onShow(refresh());
+            Log.d("happy", "start: ");
+            Log.d("happy", "start: ");
         }
     }
 
     @Override
     public void add(String... car){
 
-        Number key = realm.where(Car.class).max("id");
+        Number key = realmInstance.where(Car.class).max("id");
         long nextId = 0;
         if(key != null) {
             nextId = key.longValue() + 1;
@@ -46,7 +51,7 @@ public class CarPresenter implements Presenter<Car> {
         final Car newCar = new Car(nextId, car[0]);
 
 
-        realm.executeTransactionAsync(new Realm.Transaction() {
+        realmInstance.executeTransactionAsync(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
                 realm.copyToRealm(newCar);
@@ -75,7 +80,7 @@ public class CarPresenter implements Presenter<Car> {
 
     @Override
     public List<Car> refresh(){
-        RealmQuery<Car> query = realm.where(Car.class);
+        RealmQuery<Car> query = realmInstance.where(Car.class);
         RealmResults<Car> result = query.findAll();
 
         List<Car> carList = new ArrayList<>();
@@ -89,15 +94,15 @@ public class CarPresenter implements Presenter<Car> {
     @Override
     public void onDestroy() {
         activity = null;
-        realm.close();
+        realmInstance.close();
     }
 
     @Override
     public void remove(Car car, int position) {
-        RealmResults<Car> row = realm.where(Car.class).equalTo("id", car.getId()).findAll();
-        realm.beginTransaction();
+        RealmResults<Car> row = realmInstance.where(Car.class).equalTo("id", car.getId()).findAll();
+        realmInstance.beginTransaction();
         boolean result = row.deleteAllFromRealm();
-        realm.commitTransaction();
+        realmInstance.commitTransaction();
         if(result && activity != null){
             activity.itemRemoved(position);
         }
@@ -105,10 +110,10 @@ public class CarPresenter implements Presenter<Car> {
 
     @Override
     public void update(Car s, int position) {
-        Car car = realm.where(Car.class).equalTo("id", s.getId()).findFirst();
-        realm.beginTransaction();
+        Car car = realmInstance.where(Car.class).equalTo("id", s.getId()).findFirst();
+        realmInstance.beginTransaction();
         car.setName(s.getName());
-        realm.commitTransaction();
+        realmInstance.commitTransaction();
         if(activity != null){
             activity.updated(s, position);
         }
